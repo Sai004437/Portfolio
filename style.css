@@ -1,0 +1,180 @@
+:root{
+  --bg:#0b0d0f;
+  --card:#0f1316;
+  --muted:#9aa4ad;
+  --accent:#6ad3ff;
+  --accent-2:#7b61ff;
+  --glass: rgba(255,255,255,0.03);
+  --radius:14px;
+  --max-width:1100px;
+  --ff-heading: "Neue Haas Grotesk Display", "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  --ff-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background:linear-gradient(180deg,var(--bg) 0%, #0b0d10 100%);
+  color:#e6eef6;
+  font-family:var(--ff-body);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
+  -webkit-text-size-adjust:100%;
+}
+
+/* App layout */
+.app{display:flex;flex-direction:column;min-height:100vh}
+
+/* Topbar */
+.topbar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1rem;
+  padding:18px 28px;
+  background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-bottom:1px solid rgba(255,255,255,0.03);
+  backdrop-filter: blur(6px);
+  position:sticky;
+  top:0;z-index:60;
+}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{
+  width:52px;height:52px;border-radius:10px;
+  display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(135deg,var(--accent-2),var(--accent));
+  font-weight:800;color:#071018;font-family:var(--ff-heading);
+  font-size:18px;box-shadow:0 6px 18px rgba(0,0,0,0.5)
+}
+.brand-text .name{font-weight:700;font-family:var(--ff-heading);font-size:15px}
+.brand-text .title{font-size:12px;color:var(--muted)}
+
+/* Nav */
+.nav{display:flex;gap:18px;align-items:center}
+.nav-link{
+  color:var(--muted);text-decoration:none;font-weight:600;font-size:13px;padding:8px 10px;border-radius:8px;
+  transition:all .22s ease;
+}
+.nav-link:hover{color:var(--accent);transform:translateY(-3px);background:rgba(255,255,255,0.01)}
+
+/* Hero */
+.hero{
+  display:flex;gap:40px;align-items:stretch;padding:72px 28px 36px;max-width:var(--max-width);margin:0 auto;width:100%;
+}
+.hero-inner{flex:1;min-width:320px}
+.hero-title{
+  font-family:var(--ff-heading);font-size:44px;line-height:1.02;margin:0 0 16px;color:#ffffff;font-weight:800;
+  letter-spacing:-0.4px;
+}
+.hero-sub{color:var(--muted);font-size:16px;margin-bottom:22px;max-width:70ch}
+.hero-cta{display:flex;gap:12px;margin-bottom:18px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:12px;text-decoration:none;font-weight:700;font-size:14px}
+.btn-primary{background:linear-gradient(90deg,var(--accent-2),var(--accent));color:#071018;box-shadow:0 10px 30px rgba(106,211,255,0.06)}
+.btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--accent);}
+
+/* Meta list in hero */
+.meta{display:flex;gap:14px;list-style:none;padding:0;margin-top:18px}
+.meta li{display:flex;flex-direction:column;background:var(--glass);padding:10px 12px;border-radius:10px;color:var(--muted);min-width:120px}
+.meta li strong{font-weight:700;color:#fff;margin-bottom:6px;font-size:13px}
+
+/* Hero art - decorative cards (tightened spacing; stacked neatly) */
+.hero-art{
+  width:320px;
+  display:flex;
+  flex-direction:column;
+  gap:6px;                      /* reduced gap to tighten spacing */
+  align-items:flex-end;
+}
+.card-glass{
+  width:300px;
+  padding:12px;                 /* slightly reduced padding */
+  border-radius:12px;
+  background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border:1px solid rgba(255,255,255,0.03);
+}
+.card-glass.alt{
+  transform:translateY(4px) scale(.995);  /* smaller offset so stacking is tighter */
+}
+.card-title{font-weight:700;font-size:14px;color:#fff;margin-bottom:8px}
+.card-body{color:var(--muted);font-size:13px}
+
+/* Main container */
+.container{max-width:var(--max-width);margin:28px auto;padding:0 20px;flex:1}
+
+/* Panel */
+.panel{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));padding:26px;border-radius:var(--radius);margin-bottom:20px;border:1px solid rgba(255,255,255,0.02);box-shadow:0 8px 30px rgba(2,6,23,0.6)}
+.panel-title{font-family:var(--ff-heading);font-size:20px;color:#fff;margin-bottom:14px}
+
+/* Grid two columns */
+.grid-2{display:grid;grid-template-columns:1fr 320px;gap:20px;align-items:start}
+.profile{background:rgba(255,255,255,0.02);padding:14px;border-radius:12px}
+.avatar{width:86px;height:86px;border-radius:14px;background:linear-gradient(135deg,var(--accent-2),var(--accent));display:flex;align-items:center;justify-content:center;font-weight:800;color:#071018;font-size:20px;margin-bottom:12px}
+.profile-meta .meta-row{display:flex;justify-content:space-between;padding:6px 0;color:var(--muted);font-size:14px}
+.lead{color:var(--muted);margin-bottom:12px}
+.facts{list-style:disc;margin-left:18px;color:var(--muted)}
+
+/* Work cards */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.work-card{padding:18px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));border:1px solid rgba(255,255,255,0.02)}
+.wc-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.wc-role{font-size:12px;color:var(--muted)}
+.wc-tag{font-size:12px;padding:6px 8px;border-radius:8px;background:rgba(106,211,255,0.06);color:var(--accent)}
+.work-card h3{margin:6px 0 8px;font-size:16px}
+.wc-footer{display:flex;justify-content:space-between;color:var(--muted);font-size:13px}
+
+/* Skills */
+.skill-grid{display:flex;flex-wrap:wrap;gap:12px}
+.skill{background:rgba(255,255,255,0.02);padding:12px;border-radius:10px;min-width:200px}
+.skill-name{font-weight:700;color:#fff;margin-bottom:6px}
+.skill-lvl{color:var(--muted);font-size:13px}
+
+/* Language table */
+.lang-table-wrap{overflow:auto}
+.lang-table{width:100%;border-collapse:collapse;background:transparent}
+.lang-table th,.lang-table td{padding:12px;text-align:left;border-bottom:1px solid rgba(255,255,255,0.03);font-size:14px}
+.lang-table th{color:var(--muted);font-weight:700}
+
+/* Education */
+.edu-list{list-style:disc;margin-left:18px;color:var(--muted)}
+
+/* Contact */
+.contact-panel{text-align:center}
+.contact-sub{color:var(--muted);margin-bottom:14px}
+.contact-icons{display:flex;gap:18px;justify-content:center}
+.social{width:56px;height:56px;border-radius:12px;display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03);color:var(--accent);font-size:20px;text-decoration:none;transition:transform .18s ease, background .18s ease}
+.social:hover{transform:translateY(-6px);background:linear-gradient(90deg,var(--accent-2),var(--accent));color:#071018;box-shadow:0 10px 30px rgba(106,211,255,0.06)}
+
+/* Footer */
+.site-footer{padding:28px;text-align:center;color:var(--muted);border-top:1px solid rgba(255,255,255,0.02);margin-top:auto}
+
+/* Responsive */
+@media (max-width:880px){
+  .hero{flex-direction:column;padding:48px 16px}
+  .hero-art{order:2;width:100%;align-items:center}
+  .grid-2{grid-template-columns:1fr;gap:16px}
+  .nav{display:none}
+  .topbar{padding:12px}
+  .brand-text .name{font-size:14px}
+  .hero-title{font-size:28px}
+}
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.contact-icons img {
+  width: 40px;
+  height: 40px;
+  filter: invert(100%); /* makes icons white for dark mode */
+  transition: transform 0.3s, filter 0.3s;
+  cursor: pointer;
+}
+
+.contact-icons img:hover {
+  transform: scale(1.2);
+  filter: invert(60%) sepia(100%) saturate(300%) hue-rotate(180deg);
+}

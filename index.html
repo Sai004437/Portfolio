@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SAI KRISHNA B — Portfolio</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Neue+Haas+Grotesk+Display:wght@400;600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/5f8c6b8c6f.js" crossorigin="anonymous" defer></script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+
+  <!-- App shell -->
+  <div class="app">
+
+    <!-- Sidebar / top bar -->
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo">SK</div>
+        <div class="brand-text">
+          <div class="name">SAI KRISHNA B </div>
+          <div class="title">Productive • Precise • Professional</div>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#work" class="nav-link">Work</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#langs" class="nav-link">Languages</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="home" aria-label="Hero">
+      <div class="hero-inner">
+        <h1 class="hero-title">HELLO, I'M SAI KRISHNA</h1>
+        <p class="hero-sub">
+          I build reliable products and security tooling — bridging embedded systems, full-stack, and SOC operations.
+          Currently focused on product-grade frontend & cybersecurity workflows.
+        </p>
+
+        <div class="hero-cta">
+          <a href="#work" class="btn btn-primary">View Work</a>
+          <a href="#contact" class="btn btn-ghost">Contact</a>
+        </div>
+
+        <ul class="meta">
+          <li><strong>Role</strong><span>Final Year Computer Sciecnce Student</span></li>
+          <li><strong>Focus</strong><span>Frontend & Cybersecurity</span></li>
+          <li><strong>Location</strong><span>Bangalore, India</span></li>
+        </ul>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <!-- decorative card grid -->
+        <div class="hero-art" aria-hidden="true">
+        <div class="card-glass">
+        <div class="card-title">E-Commerce DB</div>
+        <div class="card-body">Clean architecture, auth & admin workflows.</div>
+        </div>
+
+    <div class="card-glass">
+    <div class="card-title">MFA Flow</div>
+    <div class="card-body">QR & OTP integration (Flask + JS).</div>
+    </div>
+
+    <div class="card-glass">
+    <div class="card-title">Optimised Password Cracker <span class="pill">In progress</span></div>
+    <div class="card-body">Adaptive auditing tool: dictionary + brute + rainbow strategies.</div>
+    </div>
+    </div>
+    </section>
+
+    <!-- Main content -->
+    <main class="container">
+
+      <!-- About -->
+      <section class="panel" id="about">
+        <h2 class="panel-title">About</h2>
+        <div class="grid-2">
+          <div>
+            <p class="lead">
+              I’m Sai — Final year Computer Science student specializing in IoT and Cybersecurity with a strong interest in software
+              engineering. Passionate about cybersecurity, problem-solving, and building innovative
+              systems. Currently developing skills in programming and secure system design while working on
+              projects that combine software development and cybersecurity practices.
+            </p>
+
+            <ul class="facts">
+              <li><strong>Now:</strong> Building hardened frontends & automation for security workflows</li>
+              <li><strong>Tools:</strong> Wazuh, Wireshark, Flask, Node, React (basics)</li>
+              <li><strong>Goal:</strong> Product teams where engineering & security meet</li>
+            </ul>
+          </div>
+
+          <aside class="profile">
+            <div class="avatar">SK</div>
+            <div class="profile-meta">
+              <div class="meta-row"><span class="label">Email</span><a href="mailto:saikrishna110504@gmail.com">saikrishna110504@gmail.com</a></div>
+              <div class="meta-row"><span class="label">Graduation</span>2026 — B.Tech, CSE</div>
+              <div class="meta-row"><span class="label">Location</span>Bangalore, IN</div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- Work / Projects -->
+      <section class="panel" id="work">
+        <h2 class="panel-title">Projects</h2>
+
+        <div class="cards">
+          <article class="work-card">
+            <div class="wc-head">
+              <div class="wc-role">System Design</div>
+              <div class="wc-tag">E-Commerce DB</div>
+            </div>
+            <h3>Scalable Catalog & Auth</h3>
+            <p>Designed a modular DB & API layer that supports product hierarchies, secure auth, and admin tooling.</p>
+            <div class="wc-footer">
+              <span>Python • Node</span>
+              <span>Databases • Auth</span>
+            </div>
+          </article>
+
+          <article class="work-card">
+            <div class="wc-head">
+              <div class="wc-role">Security Tooling</div>
+              <div class="wc-tag">Password Audit</div>
+            </div>
+            <h3>Optimised Password Cracker</h3>
+            <p>Adaptive auditing tool — selects fastest attack path based on policy + hints to reduce runtime drastically.</p>
+            <div class="wc-footer">
+              <span>Python • Algorithms</span>
+              <span>Audit • Offline</span>
+            </div>
+          </article>
+
+          <article class="work-card">
+            <div class="wc-head">
+              <div class="wc-role">Authentication</div>
+              <div class="wc-tag">MFA / OTP</div>
+            </div>
+            <h3>Robust MFA Flow</h3>
+            <p>Built QR + OTP flow for prototype login — focused on UX and secure token exchange.</p>
+            <div class="wc-footer">
+              <span>Flask • JS</span>
+              <span>OTP • QR</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section class="panel" id="skills">
+        <h2 class="panel-title">Skills</h2>
+        <div class="skill-grid">
+          <div class="skill">
+            <div class="skill-name">Security</div>
+            <div class="skill-lvl">Wazuh, Threat Analysis, Log Analysis, Web Application Security</div>
+          </div>
+          <div class="skill">
+            <div class="skill-name">Programming</div>
+            <div class="skill-lvl">Python, JavaScript, HTML, CSS</div>
+          </div>
+          <div class="skill">
+            <div class="skill-name">Frameworks/Tools</div>
+            <div class="skill-lvl">React, Node.js, Linux, Windows</div>
+          </div>
+          <div class="skill">
+            <div class="skill-name">Databases</div>
+            <div class="skill-lvl">MySQL</div>
+            </div>
+            <div class="skill">
+            <div class="skill-name">Other</div>
+            <div class="skill-lvl">Excel, Basic Networking</div>
+          </div>
+          <div class="skill">
+            <div class="skill-name">Certifications</div>
+            <div class="skill-lvl"> Introduction to Cybersecurity (Cisco, 2023), Cyber Job Simulation (Deloitte, 2024)</div>
+        </div>
+      </section>
+
+      <!-- Languages -->
+      <section class="panel" id="langs">
+        <h2 class="panel-title">Languages Known</h2>
+
+        <div class="lang-table-wrap">
+          <table class="lang-table" aria-label="Languages known">
+            <thead>
+              <tr><th>Language</th><th>Proficiency</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>English</td><td>Fluent</td></tr>
+              <tr><td>Kannada</td><td>Fluent</td></tr>
+              <tr><td>Hindi</td><td>Intermediate</td></tr>
+              <tr><td>Telugu</td><td>Basic</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Education -->
+      <section class="panel" id="education">
+        <h2 class="panel-title">Education</h2>
+        <ul class="edu-list">
+          <li><strong>B.Tech — Computer Science</strong> · SEA College Of Engineering (Expected 2026)</li>
+          <li>CMR Group Of Institutions · 2022</li>
+          <li>ST. Thomas School · 2020</li>
+        </ul>
+      </section>
+
+    
+    <!-- Contact -->
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="contact-icons">
+    <a href="mailto:saikrishna110504@gmail.com" target="_blank">
+      <img src="icons/gmail.png" alt="Gmail" />
+    </a>
+    <a href="https://www.linkedin.com/in/saikrishna4437" target="_blank">
+      <img src="icons/linkedin.png" alt="LinkedIn" />
+    </a>
+    <a href="https://github.com/Sai004437" target="_blank">
+      <img src="icons/github.png" alt="GitHub" />
+    </a>
+  </div>
+</section>
+
+
+
+    </main>
+
+    <footer class="site-footer">
+      <div>© <span id="year"></span> Sai Krishna B</div>
+    </footer>
+  </div>
+
+</body>
+</html>
